@@ -7,7 +7,7 @@ A professional support website for PocketSay, an iOS app that displays large, cu
 - **React** with **TypeScript**
 - **Tailwind CSS** for styling
 - **Vite** for build tooling
-- **Firebase Hosting** for deployment
+- **Vercel** for deployment
 
 ## 📦 Installation
 
@@ -38,47 +38,44 @@ npm run build
 - SEO optimized with meta tags
 - Accessible (semantic HTML, ARIA labels)
 
-## 🚢 Deployment to Firebase Hosting
+## 🚢 Deployment to Vercel
 
-### Prerequisites
+### Option 1: Deploy via Vercel Dashboard (Recommended)
 
-1. Install Firebase CLI:
+1. Push your code to GitHub (already done!)
+2. Go to [vercel.com](https://vercel.com) and sign in
+3. Click "Add New Project"
+4. Import your GitHub repository: `mriansabado/pocket-say-support`
+5. Vercel will auto-detect Vite settings
+6. Click "Deploy"
+
+Your site will be live at `https://your-project.vercel.app`
+
+### Option 2: Deploy via Vercel CLI
+
+1. Install Vercel CLI (if not already installed):
 ```bash
-npm install -g firebase-tools
+npm install -g vercel
 ```
 
-2. Login to Firebase:
+2. Login to Vercel:
 ```bash
-firebase login
+vercel login
 ```
 
-3. Initialize Firebase in your project (if not already done):
+3. Deploy:
 ```bash
-firebase init hosting
+vercel
 ```
 
-4. Update `.firebaserc` with your Firebase project ID:
-```json
-{
-  "projects": {
-    "default": "your-actual-project-id"
-  }
-}
-```
-
-### Deploy Steps
-
-1. Build the project:
+4. For production deployment:
 ```bash
-npm run build
+vercel --prod
 ```
 
-2. Deploy to Firebase:
-```bash
-firebase deploy --only hosting
-```
+### Automatic Deployments
 
-Your site will be live at `https://your-project-id.web.app`
+Once connected to Vercel, every push to `main` branch will automatically deploy!
 
 ## 📁 Project Structure
 
