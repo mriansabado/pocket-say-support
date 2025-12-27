@@ -17,7 +17,7 @@ function App() {
       <HowItWorks />
       <FAQ />
       <Contact />
-      <Footer />
+      <Footer />asdf
     </div>
   );
 }
