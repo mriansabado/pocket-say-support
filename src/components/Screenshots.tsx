@@ -1,45 +1,60 @@
 import React from 'react';
-import portraitMountains from '../assets/screenshots/portrait mountains.PNG';
-import babySleeping from '../assets/screenshots/baby sleeping.PNG';
 import babySleepingNight from '../assets/screenshots/baby sleeping night.PNG';
-import portraitNightMode from '../assets/screenshots/portrain night mode.PNG';
 import canTalkDay from '../assets/screenshots/can talk day.PNG';
-import heyWhatsUp from '../assets/screenshots/hey whats up.PNG';
 import thankYou from '../assets/screenshots/thank you.PNG';
-import timeToGoNight from '../assets/screenshots/time to go night.PNG';
+import fonts from '../assets/screenshots/fonts.PNG';
+import hiThere from '../assets/screenshots/hi-there.PNG';
+import itsPocketSay from '../assets/screenshots/its-pocketsay.PNG';
+import loveYourMusic from '../assets/screenshots/love-your-music.PNG';
+import savedSayings from '../assets/screenshots/saved-sayings.PNG';
+import settings from '../assets/screenshots/settings.PNG';
+import themes from '../assets/screenshots/themes.PNG';
+import youAreAmazing from '../assets/screenshots/you-are-amazing.PNG';
 
 const screenshots = [
   {
-    image: portraitMountains,
-    alt: 'PocketSay with Mountains background theme',
+    image: hiThere,
+    alt: 'PocketSay "Hi There" message example',
   },
   {
-    image: babySleeping,
-    alt: 'PocketSay day mode example',
+    image: itsPocketSay,
+    alt: 'PocketSay "It\'s PocketSay" message example',
   },
   {
-    image: babySleepingNight,
-    alt: 'PocketSay night mode example',
+    image: youAreAmazing,
+    alt: 'PocketSay "You Are Amazing" message example',
   },
   {
-    image: portraitNightMode,
-    alt: 'PocketSay portrait night mode',
-  },
-  {
-    image: canTalkDay,
-    alt: 'PocketSay day mode message',
-  },
-  {
-    image: heyWhatsUp,
-    alt: 'PocketSay casual message example',
+    image: loveYourMusic,
+    alt: 'PocketSay "Love Your Music" message example',
   },
   {
     image: thankYou,
     alt: 'PocketSay thank you message',
   },
   {
-    image: timeToGoNight,
-    alt: 'PocketSay night mode message',
+    image: canTalkDay,
+    alt: 'PocketSay day mode message',
+  },
+  {
+    image: babySleepingNight,
+    alt: 'PocketSay night mode example',
+  },
+  {
+    image: fonts,
+    alt: 'PocketSay font selection screen',
+  },
+  {
+    image: themes,
+    alt: 'PocketSay animated themes selection',
+  },
+  {
+    image: settings,
+    alt: 'PocketSay settings screen',
+  },
+  {
+    image: savedSayings,
+    alt: 'PocketSay Quick Say saved messages',
   },
 ];
 

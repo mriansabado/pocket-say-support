@@ -1,5 +1,6 @@
 import React from 'react';
 import appIcon from '../assets/icon.png';
+import itsPocketSay from '../assets/screenshots/its-pocketsay.PNG';
 
 const Hero: React.FC = () => {
   return (
@@ -18,19 +19,47 @@ const Hero: React.FC = () => {
           <img 
             src={appIcon} 
             alt="PocketSay App Icon" 
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-3xl shadow-2xl"
+            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-3xl shadow-2xl"
           />
         </div>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-slide-up">
-          PocketSay
-        </h1>
+        {/* Screenshot */}
+        <div className="mb-8 animate-slide-up flex justify-center">
+          <img 
+            src={itsPocketSay} 
+            alt="PocketSay app screenshot" 
+            className="w-80 sm:w-96 md:w-[28rem] lg:w-[32rem] rounded-2xl shadow-2xl border-4 border-white/20"
+          />
+        </div>
         <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/90 mb-4 animate-slide-up">
           Say it BIG when you can't say it loud
         </p>
-        <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto animate-slide-up">
+        <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-6 max-w-2xl mx-auto animate-slide-up">
           Display large, customizable text for visual communication across distances. 
           Perfect for when you need to be seen, not heard.
         </p>
+        
+        {/* Key Benefits Banner */}
+        <div className="mb-8 animate-slide-up">
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 sm:p-6 border-2 border-white/30 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              <div className="flex flex-col items-center">
+                <div className="text-3xl mb-2">💳</div>
+                <div className="text-sm sm:text-base font-semibold text-white">Pay Once</div>
+                <div className="text-xs sm:text-sm text-white/90">$0.99 One-Time</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl mb-2">🔒</div>
+                <div className="text-sm sm:text-base font-semibold text-white">No Data Collection</div>
+                <div className="text-xs sm:text-sm text-white/90">Completely Private</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl mb-2">🚫</div>
+                <div className="text-sm sm:text-base font-semibold text-white">No Ads Ever</div>
+                <div className="text-xs sm:text-sm text-white/90">No Subscriptions</div>
+              </div>
+            </div>
+          </div>
+        </div>
         
         {/* App Store Badge Placeholder */}
         <div className="animate-slide-up">

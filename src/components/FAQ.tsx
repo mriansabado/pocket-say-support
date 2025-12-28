@@ -23,12 +23,32 @@ const faqs: FAQItem[] = [
     answer: 'You can display up to 68 characters per message. This keeps your messages clear, readable, and impactful at a distance.',
   },
   {
-    question: 'Are there subscriptions?',
-    answer: 'No subscriptions ever! PocketSay is a single purchase of $0.99. Pay once, own forever. No recurring fees, no hidden costs.',
+    question: 'Are there subscriptions or ads?',
+    answer: 'Absolutely not! PocketSay is a single one-time purchase of $0.99. Pay once and it\'s yours. No subscriptions, no recurring fees, no hidden costs, and never any ads. What you pay is what you get.',
   },
   {
     question: 'Can I customize the display?',
-    answer: 'Absolutely! Choose from 10 font styles, 4 animated backgrounds (Mountains, Tropical, Galaxy, Ocean), 7 theme animations (Wave, Alert, Party, Happy, Sad, Thinking, Love), and toggle between day/night modes. Plus, you can add drawing overlays for extra creativity!',
+    answer: 'Absolutely! Choose from 10 font styles (Default, Modern, Sleek, Cartoon, Elegant, Futuristic, Handwritten, Retro, Minimalist, Bold), 8 animated backgrounds (Mountains, Tropical, Galaxy, Rainbow, Sunset, 80s Pop, Forest, Blossom), 8 animated themes (Wave, Alert, Celebrate, Happy, Sad, Thinking, Love), custom background colors (8 colors for day/night modes), text color customization (8 colors for day/night modes), and toggle between day/night modes. Plus, you can add drawing overlays and save messages with Quick Say!',
+  },
+  {
+    question: 'Text not displaying?',
+    answer: 'Ensure your message is under 68 characters and that you\'ve tapped "Enter" or the submit button.',
+  },
+  {
+    question: 'Background not showing?',
+    answer: 'Make sure you\'ve selected a background from Settings. Try toggling day/night mode to refresh the display.',
+  },
+  {
+    question: 'Landscape not working?',
+    answer: 'The results page automatically switches to landscape. If it doesn\'t, try rotating your device manually.',
+  },
+  {
+    question: 'Colors not changing?',
+    answer: 'Make sure you\'ve selected colors in Settings. Remember that day and night modes have separate color settings, so you need to configure each mode individually.',
+  },
+  {
+    question: 'Is my data private?',
+    answer: 'Yes! PocketSay does not collect, store, or transmit any personal data. All messages are displayed locally on your device and are not saved or shared. Complete privacy guaranteed.',
   },
 ];
 
