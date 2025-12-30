@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
       </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0 text-center animate-fade-in">
         {/* App Icon */}
         <div className="mb-6 animate-slide-up flex justify-center">
           <img 
@@ -40,22 +40,22 @@ const Hero: React.FC = () => {
         
         {/* Key Benefits Banner */}
         <div className="mb-8 animate-slide-up">
-          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 sm:p-6 border-2 border-white/30 max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-              <div className="flex flex-col items-center">
-                <div className="text-3xl mb-2">💳</div>
-                <div className="text-sm sm:text-base font-semibold text-white">Pay Once</div>
-                <div className="text-xs sm:text-sm text-white/90">$0.99 One-Time</div>
+          <div className="bg-white/25 backdrop-blur-lg rounded-xl p-3 sm:p-4 border-2 border-white/40 shadow-2xl max-w-4xl mx-auto">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
+              <div className="flex flex-col items-center px-2 sm:px-4">
+                <div className="text-2xl sm:text-3xl mb-1">💳</div>
+                <div className="text-xs sm:text-sm font-bold text-white leading-tight mb-0.5">Pay Once</div>
+                <div className="text-[10px] sm:text-xs text-white/95 font-medium">$0.99</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="text-3xl mb-2">🔒</div>
-                <div className="text-sm sm:text-base font-semibold text-white">No Data Collection</div>
-                <div className="text-xs sm:text-sm text-white/90">Completely Private</div>
+              <div className="flex flex-col items-center px-2 sm:px-4 border-x border-white/30">
+                <div className="text-2xl sm:text-3xl mb-1">🔒</div>
+                <div className="text-xs sm:text-sm font-bold text-white leading-tight mb-0.5">No Data</div>
+                <div className="text-[10px] sm:text-xs text-white/95 font-medium">Private</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="text-3xl mb-2">🚫</div>
-                <div className="text-sm sm:text-base font-semibold text-white">No Ads Ever</div>
-                <div className="text-xs sm:text-sm text-white/90">No Subscriptions</div>
+              <div className="flex flex-col items-center px-2 sm:px-4">
+                <div className="text-2xl sm:text-3xl mb-1">🚫</div>
+                <div className="text-xs sm:text-sm font-bold text-white leading-tight mb-0.5">No Ads</div>
+                <div className="text-[10px] sm:text-xs text-white/95 font-medium">No Subs</div>
               </div>
             </div>
           </div>
