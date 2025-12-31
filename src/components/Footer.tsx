@@ -1,11 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import maunaLogo from '../assets/mauna-digital-splash screen.png';
 
-interface FooterProps {
-  onPrivacyClick?: () => void;
-}
-
-const Footer: React.FC<FooterProps> = ({ onPrivacyClick }) => {
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -56,16 +53,11 @@ const Footer: React.FC<FooterProps> = ({ onPrivacyClick }) => {
                   Contact
                 </a>
               </li>
-              {onPrivacyClick && (
-                <li>
-                  <button
-                    onClick={onPrivacyClick}
-                    className="hover:text-white transition-colors text-left"
-                  >
-                    Privacy Policy
-                  </button>
-                </li>
-              )}
+              <li>
+                <Link to="/privacy-policy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

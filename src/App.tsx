@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,22 +11,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 
-function App() {
-  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
-
-  if (showPrivacyPolicy) {
-    return (
-      <div className="min-h-screen">
-        <Navbar />
-        <PrivacyPolicy onBack={() => setShowPrivacyPolicy(false)} />
-        <Footer />
-      </div>
-    );
-  }
-
+function Home() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
+    <>
       <Hero />
       <About />
       <Features />
@@ -35,7 +22,19 @@ function App() {
       <Tips />
       <FAQ />
       <Contact />
-      <Footer onPrivacyClick={() => setShowPrivacyPolicy(true)} />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
