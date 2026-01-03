@@ -25,11 +25,15 @@ const Contact: React.FC = () => {
       });
 
       const data = await response.json();
+      
+      // Log the full response for debugging
+      console.log('API Response:', { status: response.status, data });
 
       if (!response.ok) {
         const errorMsg = data.details 
           ? `${data.error}: ${data.details}` 
           : data.error || 'Failed to send message';
+        console.error('API Error:', errorMsg);
         throw new Error(errorMsg);
       }
 
