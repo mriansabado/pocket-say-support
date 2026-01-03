@@ -38,9 +38,9 @@ export default async function handler(
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'PocketSay Support <onboarding@resend.dev>', // You'll need to verify your domain with Resend
-      to: ['maunadigitalcontact@gmail.com'], // Your email
-      replyTo: email,
+      from: 'PocketSay Support <onboarding@resend.dev>', // Test domain - only sends to account owner
+      to: ['mriansabado@gmail.com'], // Using your account email for now (test domain limitation)
+      replyTo: 'maunadigitalcontact@gmail.com', // Replies will go to your business email
       subject: `Contact Form: ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
