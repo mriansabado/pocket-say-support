@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export default async function handler(
   req: VercelRequest,
   res: VercelResponse
@@ -13,6 +11,18 @@ export default async function handler(
   }
 
   try {
+    // Check if API key is set
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set');
+      return res.status(500).json({ 
+        error: 'Server configuration error',
+        details: 'RESEND_API_KEY environment variable is missing'
+      });
+    }
+
+    // Initialize Resend inside the handler
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const { name, email, message } = req.body;
 
     // Validate required fields
@@ -51,14 +61,23 @@ ${message}
     });
 
     if (error) {
-      console.error('Resend error:', error);
-      return res.status(500).json({ error: 'Failed to send email' });
+      console.error('Resend error:', JSON.stringify(error, null, 2));
+      return res.status(500).json({ 
+        error: 'Failed to send email',
+        details: error.message || JSON.stringify(error)
+      });
     }
 
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error('Server error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorStack = error instanceof Error ? error.stack : String(error);
+    console.error('Error stack:', errorStack);
+    return res.status(500).json({ 
+      error: 'Internal server error',
+      details: errorMessage
+    });
   }
 }
 
