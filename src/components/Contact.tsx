@@ -7,15 +7,37 @@ const Contact: React.FC = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, you'd send this to a backend
-    // For now, we'll use mailto link
-    const subject = encodeURIComponent(`Contact from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:maunadigitalcontact@gmail.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setSubmitted(true);
+      // Reset form
+      setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,14 +65,14 @@ const Contact: React.FC = () => {
               <div className="text-6xl mb-4">✅</div>
               <h3 className="text-2xl font-semibold text-white mb-2">Thank you!</h3>
               <p className="text-white/90 mb-6">
-                Your email client should open shortly. If not, you can reach us directly at:
+                Your message has been sent successfully. We'll get back to you soon!
               </p>
-              <a
-                href="mailto:maunadigitalcontact@gmail.com"
+              <button
+                onClick={() => setSubmitted(false)}
                 className="inline-block bg-white text-purple-600 px-8 py-3 rounded-xl font-semibold hover:bg-white/90 transition-colors"
               >
-                maunadigitalcontact@gmail.com
-              </a>
+                Send Another Message
+              </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -102,11 +124,18 @@ const Contact: React.FC = () => {
                 />
               </div>
               
+              {error && (
+                <div className="bg-red-500/20 border border-red-500/50 text-white px-4 py-3 rounded-xl">
+                  {error}
+                </div>
+              )}
+              
               <button
                 type="submit"
-                className="w-full bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-colors shadow-lg"
+                disabled={loading}
+                className="w-full bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}
