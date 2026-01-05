@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
       </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0 text-center animate-fade-in">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-28 text-center animate-fade-in">
         {/* App Icon */}
         <div className="mb-6 animate-slide-up flex justify-center">
           <img 
