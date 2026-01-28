@@ -9,8 +9,13 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: '🎨',
-    title: '8 Animated Backgrounds',
-    description: 'Mountains, Tropical, Galaxy, Rainbow, Sunset, 80s Pop, Forest, and Blossom themes. All support day and night modes.',
+    title: '7 Animated Backgrounds',
+    description: 'Mountains, Tropical, Galaxy, Rainbow, Sunset, 80s Pop, and Blossom themes. All support day and night modes.',
+  },
+  {
+    icon: '📷',
+    title: 'Custom Photo Backgrounds',
+    description: 'Use your own photos as backgrounds. Select from your photo library to personalize your messages.',
   },
   {
     icon: '🎨',
@@ -29,8 +34,8 @@ const features: Feature[] = [
   },
   {
     icon: '✨',
-    title: '8 Animated Themes',
-    description: 'Wave, Alert, Celebrate, Happy, Sad, Thinking, and Love animations to add personality to your messages.',
+    title: '12 Animated Themes',
+    description: 'Wave, Happy, Love, Funny, Good, Thanks, Sorry, Sad, Angry, Think, Ask, and Alert animations to add personality to your messages.',
   },
   {
     icon: '🌓',

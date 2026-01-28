@@ -28,7 +28,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'Can I customize the display?',
-    answer: 'Absolutely! Choose from 10 font styles (Default, Modern, Sleek, Cartoon, Elegant, Futuristic, Handwritten, Retro, Minimalist, Bold), 8 animated backgrounds (Mountains, Tropical, Galaxy, Rainbow, Sunset, 80s Pop, Forest, Blossom), 8 animated themes (Wave, Alert, Celebrate, Happy, Sad, Thinking, Love), custom background colors (8 colors for day/night modes), text color customization (8 colors for day/night modes), and toggle between day/night modes. Plus, you can add drawing overlays and save messages with Quick Say!',
+    answer: 'Absolutely! Choose from 10 font styles (Default, Modern, Sleek, Cartoon, Elegant, Futuristic, Handwritten, Retro, Minimalist, Bold), 7 animated backgrounds (Mountains, Tropical, Galaxy, Rainbow, Sunset, 80s Pop, Blossom), 12 animated themes (Wave, Happy, Love, Funny, Good, Thanks, Sorry, Sad, Angry, Think, Ask, Alert), custom photo backgrounds (use your own photos), custom background colors (8 colors for day/night modes), text color customization (8 colors for day/night modes), and toggle between day/night modes. Plus, you can add drawing overlays and save messages with Quick Say!',
   },
   {
     question: 'Text not displaying?',
