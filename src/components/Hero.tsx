@@ -1,5 +1,5 @@
 import React from 'react';
-import appIcon from '../assets/icon.png';
+import pocketsayLogo from '../assets/screenshots/pocketsay 2026 logo (2).png';
 import itsPocketSay from '../assets/screenshots/its-pocketsay.PNG';
 
 const Hero: React.FC = () => {
@@ -17,8 +17,8 @@ const Hero: React.FC = () => {
         {/* App Icon */}
         <div className="mb-6 animate-slide-up flex justify-center">
           <img 
-            src={appIcon} 
-            alt="PocketSay App Icon" 
+            src={pocketsayLogo} 
+            alt="PocketSay Logo" 
             className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-3xl shadow-2xl"
           />
         </div>
